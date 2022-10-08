@@ -1,0 +1,11 @@
+
+@import 'bootstrap/scss/bootstrap.scss';
+
+@font-face {
+    font-family: 'Muli';
+    src: url(~/assets/fonts/Muli-Light.ttf) format("truetype");
+}
+
+html {
+    font-family: 'Muli', sans-serif;
+}
