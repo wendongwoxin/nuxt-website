@@ -1,5 +1,8 @@
 <template>
   <div>
-      <NuxtPage/>
+    <TheHeader />
+    <NuxtLayout/>
+    <TheFooter />
+    <Copyright />
   </div>
 </template>

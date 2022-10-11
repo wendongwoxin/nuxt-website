@@ -1,0 +1,50 @@
+.portfolio_area {
+  background-image: url(~/assets/img/portfolio_bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 340px;
+  .section_title {
+    span {
+      position: relative;
+      z-index: 3;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #001d38;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+      padding-top: 14px;
+    }
+    h3 {
+      font-size: 50px;
+      line-height: 62px;
+      font-weight: 700;
+      color: #001d38;
+      position: relative;
+      z-index: 0;
+      padding-bottom: 15px;
+    }
+  }
+  .white_text {
+    span {
+      color: #fff;
+      padding-top: 0;
+    }
+    h3 {
+      color: #fff;
+    }
+  }
+}
+.portfolio_area:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #001d38;
+  content: "";
+}

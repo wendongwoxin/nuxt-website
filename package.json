@@ -13,6 +13,9 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.2",
+    "echarts": "^5.4.0",
+    "echarts-wordcloud": "^2.0.0",
+    "naive-ui": "^2.33.4",
     "sass": "^1.55.0"
   }
 }

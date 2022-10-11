@@ -1,0 +1,53 @@
+.about_me {
+  padding-top: 75px;
+  padding-bottom: 150px;
+  position: relative;
+  .about_large_title {
+    font-weight: 800;
+    color: #f5f6f7;
+    font-size: 235px;
+    position: absolute;
+    left: 21%;
+    top: 0;
+    line-height: 1;
+    z-index: -1;
+  }
+  .about_e_details {
+    h3 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #001d38;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      color: #727272;
+      margin-top: 20px;
+      margin-bottom: 36px;
+    }
+    .download_cv {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .about_img {
+    position: relative;
+    .color_pattern {
+      position: absolute;
+      right: -80px;
+      top: -123px;
+      z-index: -1;
+      img {
+        vertical-align: middle;
+      }
+    }
+    .my_Pic {
+      height: 460px;
+      #wordcloud {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
