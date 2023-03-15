@@ -26,7 +26,7 @@
                 alt=""
               />
             </div>
-            <a href="#" class="popup popup-image"></a>
+            <a href="https://next-dashboard-three-livid.vercel.app" class="popup popup-image"></a>
             <div class="portfolio_hover">
               <div class="title">
                 <h3>Management System</h3>
