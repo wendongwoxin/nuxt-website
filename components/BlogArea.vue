@@ -27,16 +27,18 @@
                   </li>
                   <li>
                     <a href="javascript(0)">
-                      <i class="fa fa-comments">
-                       </i
-                      >
-                      {{ item.commentCount }}  Comments
+                      <i class="fa fa-comments"> </i>
+                      {{ item.commentCount }} Comments
                     </a>
                   </li>
                 </ul>
               </div>
             </article>
-            <n-pagination v-model:page="page" :item-count="total" :page-size="5"/>
+            <n-pagination
+              v-model:page="page"
+              :item-count="total"
+              :page-size="5"
+            />
           </div>
         </div>
         <!-- search content -->
@@ -53,24 +55,23 @@ const page = ref(1);
 const total = ref(0);
 const getBlogs = async () => {
   try {
-    await useFetch(
-      () =>
-        `http://106.14.207.110:8081/blog/query?pageSize=5&currentPage=${page.value}`,
-      {
-        onResponse({ request, response, options }) {
-          // Process the response data
-          const data = response._data
-          if (data.status === 200) {
-            blogs.value = data.data.list;
-            total.value = data.data.total ;
-            blogs.value.map(item => {{
-              item.imageUrl = new URL(`../assets/img/blog/${item.image}`, import.meta.url).href
-            }})
+    await useFetch(() => `./blogs.json?pageSize=5&currentPage=${page.value}`, {
+      onResponse({ request, response, options }) {
+        // Process the response data
+        const data = response._data;
+        blogs.value = data.list;
+        total.value = data.total;
+        blogs.value.map((item) => {
+          {
+            item.imageUrl = new URL(
+              `../assets/img/blog/${item.image}`,
+              import.meta.url
+            ).href;
           }
-          return response._data;
-        },
-      }
-    );
+        });
+        return response._data;
+      },
+    });
   } catch (e) {
     console.error(e);
   }
