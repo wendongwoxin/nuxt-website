@@ -14,7 +14,7 @@
                 </a>
               </div>
               <div class="blog_details">
-                <a class="d-inline-block" href="item.blogDetail">
+                <a class="d-inline-block" :href="item.blogDetail">
                   <h2>{{ item.blogName }}</h2>
                 </a>
                 <p>{{ item.description }}</p>
@@ -61,12 +61,13 @@ const getBlogs = async () => {
         const data = response._data;
         blogs.value = data.list;
         total.value = data.total;
-        blogs.value.map((item) => {
+        blogs.value.map((item, index) => {
           {
             item.imageUrl = new URL(
               `../assets/img/blog/${item.image}`,
               import.meta.url
             ).href;
+            item.blogDetail = `blogDetail?index=${index}`;
           }
         });
         return response._data;
