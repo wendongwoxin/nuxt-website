@@ -55,7 +55,7 @@ const page = ref(1);
 const total = ref(0);
 const getBlogs = async () => {
   try {
-    await useFetch(() => `./blogs.json?pageSize=5&currentPage=${page.value}`, {
+    await useFetch(() => `/blogs.json?pageSize=5&currentPage=${page.value}`, {
       onResponse({ request, response, options }) {
         // Process the response data
         const data = response._data;
@@ -67,7 +67,7 @@ const getBlogs = async () => {
               `../assets/img/blog/${item.image}`,
               import.meta.url
             ).href;
-            item.blogDetail = `blogDetail?index=${index}`;
+            item.blogDetail = `/blogDetail?index=${index}`;
           }
         });
         return response._data;

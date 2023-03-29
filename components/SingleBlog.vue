@@ -94,7 +94,7 @@ const currentBlog = reactive({
 });
 const getcurrentBlog = async (name: String) => {
   try {
-    await useFetch(() => `./${name}.json`, {
+    await useFetch(() => `/${name}.json`, {
       onResponse({ request, response, options }) {
         // Process the response data
         const data = response._data;
@@ -109,7 +109,7 @@ const getcurrentBlog = async (name: String) => {
 
 const getBlogs = async () => {
   try {
-    await useFetch(() => `./blogs.json`, {
+    await useFetch(() => `/blogs.json`, {
       onResponse({ request, response, options }) {
         // Process the response data
         const data = response._data;
@@ -120,7 +120,7 @@ const getBlogs = async () => {
               `../assets/img/blog/${item.image}`,
               import.meta.url
             ).href;
-            item.path = `blogDetail?index=${index}`;
+            item.path = `/blogDetail?index=${index}`;
           }
         });
         const {
